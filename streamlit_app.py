@@ -39,3 +39,7 @@ my_cur.execute("SELECT * FROM FRUIT_LOAD_LIST")
 my_data_rows = my_cur.fetchall()
 streamlit.header("The Fruit List contains:")
 streamlit.dataframe(my_data_rows)
+
+# New section to display fruityvice api response
+fruit_choice = streamlit.text_input('What fruit would you like to add?','Jackfruit')
+streamlit.write('The user entered ', fruit_choice)
